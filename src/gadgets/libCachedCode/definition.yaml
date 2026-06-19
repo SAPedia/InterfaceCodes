@@ -1,0 +1,35 @@
+ResourceLoader: true
+
+hidden: true
+
+default: false
+
+supportsUrlLoad: false
+
+skins: []
+
+actions: []
+
+categories: []
+
+namespaces: []
+
+contentModels: []
+
+type: general
+
+package: false
+
+rights: []
+
+peers: []
+
+dependencies:
+    - ext.gadget.LocalObjectStorage
+
+enable: true
+
+files:
+    - Gadget-libCachedCode.js
+
+description: CachedCode <small>代码缓存</small>

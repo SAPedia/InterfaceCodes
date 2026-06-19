@@ -1,0 +1,12 @@
+/**
+ * -------------------------------------------------------------------------
+ * !!! DON'T MODIFY THIS PAGE MANUALLY, YOUR CHANGES WILL BE OVERWRITTEN !!!
+ * !!!     Repository URL: https://github.com/SAPedia/InterfaceCodes     !!!
+ * -------------------------------------------------------------------------
+ */
+
+/* <nowiki> */
+
+"use strict";(()=>{window.wgUXS=(e,a,s,w,t,o,i,d,r,c)=>({zh:d||a||s||w||t||o||i||r||c,"zh-hans":a||w||i||c,"zh-hant":s||t||o||r,"zh-cn":w||a||i||c,"zh-sg":i||a||w||c,"zh-tw":t||s||o||r,"zh-hk":o||s||r||t,"zh-mo":r||s||o||t})[e]||d||a||s||w||t||o||i||r||c;window.wgULS=(e,a,s,w,t,o,i,d,r)=>window.wgUXS(mw.config.get("wgUserLanguage"),e,a,s,w,t,o,i,d,r);window.wgUVS=(e,a,s,w,t,o,i,d,r)=>window.wgUXS(mw.config.get("wgUserVariant"),e,a,s,w,t,o,i,d,r);mw.log.deprecate(window,"addPortletLink",(...e)=>mw.util.addPortletLink.bind(mw.util)(...e),"Use mw.util.addPortletLink() instead");mw.log.deprecate(window,"getURLParamValue",(...e)=>mw.util.getParamValue.bind(mw.util)(...e),"Use mw.util.getParamValue() instead");mw.log.deprecate(window,"hasClass",(e,a)=>$(e).hasClass(a),"Use jQuery#hasClass instead");mw.log.deprecate(window,"importScriptCallback",(e,a)=>libCachedCode.injectCachedCode(`${mw.config.get("wgServer")}${mw.config.get("wgScript")}?title=${mw.util.wikiUrlencode(e)}&action=raw&ctype=text/javascript`,"script").then(a),'Use `await libCachedCode.injectCachedCode(page, "script")` instead');mw.log.deprecate(window,"importScriptURICallback",(e,a)=>libCachedCode.injectCachedCode(e,"script").then(a),'Use `await libCachedCode.injectCachedCode(page, "script")` instead');window.libPrefixNumber=(e,a=2)=>`${e}`.padStart(a,"0");const{wgNamespaceNumber:n,wgNamespaceIds:g}=mw.config.get(["wgNamespaceNumber","wgNamespaceIds"]);window.libGetPageNames=()=>{const e={talkPage:!1,basePageName:!1},a=[],s=n<0||n%2===1?NaN:n+1;let w="";for(const[i,d]of Object.entries(g))d===n&&a.push(i),!w&&d===s&&(w=i);if(a.length===0)return e;let t=mw.config.get("wgPageName");const o=t.toLowerCase();for(const i of a){const d=`${i.toLowerCase()}:`;if(o.startsWith(d)){const r=mw.util.escapeRegExp(i);t=t.replace(new RegExp(`^${r}:`,"i"),"");break}}return e.basePageName=t,w&&(e.talkPage=`${w}:${t}`),e};window.wgGetEditRequestPreload=(e=mw.config.get("wgPageName"),a=window.libGetPageNames().basePageName)=>a!==!1&&/^MediaWiki:Conversiontable\/zh-[a-z]+$/.test(e)?`Template:\u7F16\u8F91\u8BF7\u6C42/${a}`:"Template:\u7F16\u8F91\u8BF7\u6C42/comment";})();
+
+/* </nowiki> */

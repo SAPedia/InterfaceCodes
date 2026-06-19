@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+env:
+    PASSWORD: ${{ secrets.PASSWORD }}
+    USERAGENT: ${{ secrets.USERAGENT }}
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
+            - uses: pnpm/action-setup@v6
+            - name: Set Node Version
+              uses: actions/setup-node@v6
+              with:
+                  node-version: 24.x
+                  cache: pnpm
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
+            - name: Build
+              run: pnpm run build
+            - name: Deploy
+              run: pnpm run deploy

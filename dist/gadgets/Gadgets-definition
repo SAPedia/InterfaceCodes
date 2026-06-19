@@ -1,0 +1,21 @@
+{{Gadgets-definition-top}}
+
+== User ==
+* colorLinks[ResourceLoader|type=styles]|colorLinks.css
+* prettyDefinition[ResourceLoader|default|namespaces=8|contentModels=wikitext|type=general|dependencies=mediawiki.util]|prettyDefinition.js|prettyDefinition.css
+
+== Edit ==
+* Wikiplus[ResourceLoader|type=general|rights=edit]|Wikiplus.js
+* Wikiplus-highlight[ResourceLoader|type=general|rights=edit]|Wikiplus-highlight.js
+* CtrlS[ResourceLoader|default|actions=edit|type=general|rights=edit]|CtrlS.js
+
+== Admin ==
+* CleanDeleteReasons[ResourceLoader|default|actions=delete|type=general|rights=delete]|CleanDeleteReasons.js
+* interfaceVariantConverter[ResourceLoader|actions=view|namespaces=8|contentModels=wikitext|type=general|rights=edit,editinterface|dependencies=mediawiki.api,oojs-ui,ext.gadget.site-lib,ext.gadget.libCachedCode]|interfaceVariantConverter.js
+
+== Site ==
+* LocalObjectStorage[ResourceLoader|hidden|type=general|dependencies=moment]|LocalObjectStorage.js
+* site-lib[ResourceLoader|hidden|type=general|dependencies=mediawiki.util,ext.gadget.libCachedCode]|site-lib.js
+* libCachedCode[ResourceLoader|hidden|type=general|dependencies=ext.gadget.LocalObjectStorage]|libCachedCode.js
+* libOOUIDialog[ResourceLoader|hidden|default|type=general|dependencies=oojs-ui,oojs-ui-core,oojs-ui-core.styles,oojs-ui-widgets,oojs-ui-toolbars,oojs-ui-windows,oojs-ui.styles.indicators,oojs-ui.styles.icons-accessibility,oojs-ui.styles.icons-alerts,oojs-ui.styles.icons-content,oojs-ui.styles.icons-editing-advanced,oojs-ui.styles.icons-editing-core,oojs-ui.styles.icons-editing-list,oojs-ui.styles.icons-editing-styling,oojs-ui.styles.icons-interactions,oojs-ui.styles.icons-layout,oojs-ui.styles.icons-location,oojs-ui.styles.icons-media,oojs-ui.styles.icons-moderation,oojs-ui.styles.icons-movement,oojs-ui.styles.icons-user,oojs-ui.styles.icons-wikimedia]|libOOUIDialog.js
+

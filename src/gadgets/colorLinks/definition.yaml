@@ -1,0 +1,34 @@
+ResourceLoader: true
+
+hidden: false
+
+default: false
+
+supportsUrlLoad: false
+
+skins: []
+
+actions: []
+
+categories: []
+
+namespaces: []
+
+contentModels: []
+
+type: styles
+
+package: false
+
+rights: []
+
+peers: []
+
+dependencies: []
+
+enable: true
+
+files:
+    - Gadget-colorLinks.css
+
+description: 标记跨wiki和消歧义链接

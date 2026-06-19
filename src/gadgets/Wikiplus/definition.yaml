@@ -1,0 +1,35 @@
+ResourceLoader: true
+
+hidden: false
+
+default: false
+
+supportsUrlLoad: false
+
+skins: []
+
+actions: []
+
+categories: []
+
+namespaces: []
+
+contentModels: []
+
+type: general
+
+package: false
+
+rights:
+    - edit
+
+peers: []
+
+dependencies: []
+
+enable: true
+
+files:
+    - Gadget-Wikiplus.js
+
+description: Wikiplus <small>快速编辑小工具</small>

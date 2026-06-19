@@ -1,0 +1,38 @@
+ResourceLoader: true
+
+hidden: false
+
+default: true
+
+supportsUrlLoad: false
+
+skins: []
+
+actions: []
+
+categories: []
+
+namespaces:
+    - 8
+
+contentModels:
+    - wikitext
+
+type: general
+
+package: false
+
+rights: []
+
+peers: []
+
+dependencies:
+    - mediawiki.util
+
+enable: true
+
+files:
+    - Gadget-prettyDefinition.js
+    - Gadget-prettyDefinition.css
+
+description: 格式化[[MediaWiki:Gadgets-definition|小工具定义页面]]
