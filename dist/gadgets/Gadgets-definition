@@ -5,6 +5,7 @@
 * prettyDefinition[ResourceLoader|default|namespaces=8|contentModels=wikitext|type=general|dependencies=mediawiki.util]|prettyDefinition.js|prettyDefinition.css
 
 == Edit ==
+* InPageEdit-v2[ResourceLoader|type=general|rights=edit]|InPageEdit-v2.js
 * Wikiplus[ResourceLoader|type=general|rights=edit]|Wikiplus.js
 * Wikiplus-highlight[ResourceLoader|type=general|rights=edit]|Wikiplus-highlight.js
 * CtrlS[ResourceLoader|default|actions=edit|type=general|rights=edit]|CtrlS.js
