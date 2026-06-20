@@ -10,6 +10,9 @@ on:
             - 'src/widgets/**'
     workflow_dispatch:
 
+permissions:
+    contents: read
+
 env:
     PASSWORD: ${{ secrets.PASSWORD }}
     USERAGENT: ${{ secrets.USERAGENT }}
