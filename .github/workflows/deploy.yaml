@@ -4,6 +4,10 @@ on:
     push:
         branches:
             - main
+        paths:
+            - 'src/gadgets/**'
+            - 'src/global/**'
+            - 'src/widgets/**'
     workflow_dispatch:
 
 env:
