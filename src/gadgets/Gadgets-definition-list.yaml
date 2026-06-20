@@ -6,6 +6,7 @@
 
 - section: Edit
   gadgets:
+      - InPageEdit-v2
       - Wikiplus
       - Wikiplus-highlight
       - CtrlS
