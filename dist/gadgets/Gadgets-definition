@@ -15,6 +15,7 @@
 * interfaceVariantConverter[ResourceLoader|actions=view|namespaces=8|contentModels=wikitext|type=general|rights=edit,editinterface|dependencies=mediawiki.api,oojs-ui,ext.gadget.site-lib,ext.gadget.libCachedCode]|interfaceVariantConverter.js
 
 == Site ==
+* SiteTemplate[ResourceLoader|hidden|default|type=styles]|SiteTemplate.css
 * LocalObjectStorage[ResourceLoader|hidden|type=general|dependencies=moment]|LocalObjectStorage.js
 * site-lib[ResourceLoader|hidden|type=general|dependencies=mediawiki.util,ext.gadget.libCachedCode]|site-lib.js
 * libCachedCode[ResourceLoader|hidden|type=general|dependencies=ext.gadget.LocalObjectStorage]|libCachedCode.js
