@@ -102,11 +102,12 @@ const generateDescription = async (definitions: GadgetSetting[]) => {
         Object.entries(result).map(async ([name, variants]) => {
             const dir = `dist/gadgets/${name}/Gadget-${name}`;
             await mkdir(dir, { recursive: true });
-            await Promise.all(
-                Object.entries(variants).map(async ([variant, text]) => {
+            await Promise.all([
+                ...Object.entries(variants).map(async ([variant, text]) => {
                     await writeFile(`${dir}/${variant}`, text);
                 }),
-            );
+                writeFile(`${dir}/_base`, variants['zh-hans']),
+            ]);
         }),
     );
 };

@@ -1,48 +1,13 @@
 import { readFile } from 'node:fs/promises';
-import { basename, relative, sep } from 'node:path';
 import sha256 from 'crypto-js/sha256';
 import FastGlob from 'fast-glob';
 import type { DeployFileEntry, DeployFileMap } from '@/types/deploy';
-
-/**
- * 将 dist 目录中的文件路径映射为页面标题。
- *
- * 映射规则：
- * - `dist/widgets/<name>`           → `Widget:<name>`
- * - `dist/global/<name>.js`         → `MediaWiki:<name>.js`
- * - `dist/gadgets/<gadget>/<file>`  → `MediaWiki:<file>`
- *   (保留子路径，如 `Gadget-<name>/zh-cn`)
- * - `dist/gadgets/Gadgets-definition` → `MediaWiki:Gadgets-definition`
- */
-const toWikiTitle = (file: string): string => {
-    const rel = relative('dist', file).replaceAll(sep, '/');
-    const segs = rel.split('/');
-
-    if (rel.startsWith('widgets/')) {
-        return `Widget:${basename(file)}`;
-    }
-
-    if (rel.startsWith('global/')) {
-        return `MediaWiki:${basename(file)}`;
-    }
-
-    if (rel.startsWith('gadgets/')) {
-        if (segs.length === 2) {
-            // gadgets/Gadgets-definition → MediaWiki:Gadgets-definition
-            return `MediaWiki:${segs[1]!}`;
-        }
-        // gadgets/<gadget>/<file> → MediaWiki:<file>
-        // gadgets/<gadget>/<page>/<sub> → MediaWiki:<page>/<sub>
-        return `MediaWiki:${segs.slice(2).join('/')}`;
-    }
-
-    throw new Error(`Unknown file path: ${file}`);
-};
+import { toWikiTitle } from './mapping';
 
 /**
  * 扫描 dist/ 目录，计算每个文件的 SHA-256 哈希。
  *
- * @returns 页面标题 → { content, hash } 的映射
+ * @returns 页面标题 → { content, hash, distPath } 的映射
  */
 const contentHash = async (): Promise<DeployFileMap> => {
     const paths = await FastGlob.async('dist/**', { onlyFiles: true });
@@ -99,4 +64,4 @@ const needDeploy = (
     }, {});
 };
 
-export { toWikiTitle, contentHash, needDeploy };
+export { contentHash, needDeploy };

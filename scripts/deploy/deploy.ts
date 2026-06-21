@@ -1,7 +1,7 @@
-import { execSync } from 'node:child_process';
 import { Mwn } from 'mwn';
 import 'dotenv/config';
 import { contentHash, needDeploy } from './utils';
+import { formatSummary, getGitInfo } from './summary';
 
 const deploy = async () => {
     const newHash = await contentHash();
@@ -10,18 +10,12 @@ const deploy = async () => {
         console.log(`[DRY RUN] Would deploy ${Object.keys(newHash).length} file(s):\n`);
 
         for (const [title, { distPath }] of Object.entries(newHash)) {
-            const gitInfo = execSync(`git log -1 --format="%s|%H|%aN" -- "${distPath}"`, {
-                encoding: 'utf-8',
-            }).trim();
-
-            const [message, id, author] = gitInfo
-                ? gitInfo.split('|')
-                : ['chore(auto): sync changes from InterfaceCodes', 'HEAD', 'Saoutax-ibot'];
+            const [message, id, author, coAuthors] = getGitInfo(distPath);
+            const summary = formatSummary(message, id, author, coAuthors);
 
             console.log(`  ${title}`);
             console.log(`    source : ${distPath}`);
-            console.log(`    commit : ${id?.slice(0, 8)} by ${author}`);
-            console.log(`    message: ${message}\n`);
+            console.log(`    summary: ${summary}\n`);
         }
 
         console.log(`[DRY RUN] ${Object.keys(newHash).length} file(s) would be deployed.`);
@@ -53,15 +47,9 @@ const deploy = async () => {
     const deployment = needDeploy(oldHash, newHash);
 
     await bot.batchOperation(Object.entries(deployment), async ([title, { content, distPath }]) => {
-        const gitInfo = execSync(`git log -1 --format="%s|%H|%aN" -- "${distPath}"`, {
-            encoding: 'utf-8',
-        }).trim();
+        const [message, id, author, coAuthors] = getGitInfo(distPath);
 
-        const [message, id, author] = gitInfo
-            ? gitInfo.split('|')
-            : ['chore(auto): sync changes from InterfaceCodes', 'HEAD', 'Saoutax-ibot'];
-
-        const summary = `Git commit: [[git:commit/${id}|${message}]] by [[U:${author}]]`;
+        const summary = formatSummary(message, id, author, coAuthors);
         await bot.save(title, content, summary, { bot: true, tags: 'Bot' });
     });
 
