@@ -1,13 +1,3 @@
-declare global {
-    interface Window {
-        LocalObjectStorage: typeof LocalObjectStorage;
-    }
-}
-interface Moment {
-    add(amount: number, unit: string): this;
-    valueOf(): number;
-}
-declare const moment: () => Moment;
 interface Transformer {
     type: string;
     match: (value: unknown) => boolean;

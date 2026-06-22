@@ -25,7 +25,7 @@ rights: []
 peers: []
 
 dependencies:
-    - ext.gadget.LocalObjectStorage
+    - ext.gadget.libLocalObjectStorage
 
 enable: true
 

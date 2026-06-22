@@ -20,7 +20,7 @@
 - section: Site
   gadgets:
       - SiteTemplate
-      - LocalObjectStorage
       - site-lib
+      - libLocalObjectStorage
       - libCachedCode
       - libOOUIDialog

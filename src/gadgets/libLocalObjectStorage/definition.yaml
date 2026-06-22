@@ -30,6 +30,6 @@ dependencies:
 enable: true
 
 files:
-    - Gadget-LocalObjectStorage.js
+    - Gadget-libLocalObjectStorage.js
 
 description: LocalObjectStorage <small>结构化数据保存库。</small>
