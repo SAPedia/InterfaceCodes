@@ -2,7 +2,6 @@
     mw.loader.load('https://testingcf.jsdelivr.net/npm/mediawiki-inpageedit@latest');
     mw.hook('InPageEdit').add(ctx => {
         const InPageEdit = ctx.InPageEdit,
-            _msg = ctx._msg,
             { wgRelevantPageName, wgRevisionId } = mw.config.get([
                 'wgRelevantPageName',
                 'wgRevisionId',
@@ -14,11 +13,7 @@
             }).append(
                 $('<a>', {
                     href: 'javascript:void(0)',
-                    text:
-                        // @ts-ignore
-                        typeof Wikiplus !== 'undefined'
-                            ? `${_msg('quick-edit')}(IPE)`
-                            : _msg('quick-edit'),
+                    text: ctx._msg('quick-edit'),
                 }).on('click', () => {
                     InPageEdit.quickEdit({
                         page: wgRelevantPageName,
