@@ -17,6 +17,7 @@ const compileJS = async (file: string) => {
         minify: true,
         sourcemap: false,
         target: 'es2017',
+        charset: 'utf8',
         write: false,
     });
     return result.outputFiles[0]!.text.trim();
