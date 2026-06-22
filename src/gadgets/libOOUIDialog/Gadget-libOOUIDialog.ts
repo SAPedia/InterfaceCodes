@@ -101,7 +101,7 @@ interface OouiDialogOptions {
                                     ? textORjquery
                                     : $('<p>').html(textORjquery as string),
                                 {
-                                    title: '萌娘百科提醒您',
+                                    title: 'SAPedia提醒您',
                                     ...option,
                                     ...setup,
                                 },
