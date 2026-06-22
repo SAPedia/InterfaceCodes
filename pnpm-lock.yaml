@@ -256,6 +256,9 @@ importers:
       '@types/node':
         specifier: ^25.9.1
         version: 25.9.1
+      '@types/oojs-ui':
+        specifier: ^0.50.0
+        version: 0.50.0
       esbuild:
         specifier: ^0.28.0
         version: 0.28.0
@@ -946,6 +949,9 @@ packages:
 
   '@types/oojs-ui@0.46.4':
     resolution: {integrity: sha512-tpQyPjxr6FhMRNaactbjNXkr4uCsKNQMOVNJiAO5AvzxoPddChNZp4gG37Pm80jAeDP11k9ww4durnEjzqqKsQ==}
+
+  '@types/oojs-ui@0.50.0':
+    resolution: {integrity: sha512-ymTtszJuxtH2ojT9m8EbuLqBshBuqNTAWVc1RGlPr/iBq6xIWzPkuYxw5zGhlAcnSahvVx3UerN/0hA5Slfb3w==}
 
   '@types/oojs@7.0.7':
     resolution: {integrity: sha512-l99Ab1s+EhCWR/38z5VI3aimTT9QZNjpd3JlJnECHXq6uJ/osLchkkhVfY7ANeOMVT978LawYO4JyOYPQO7VLQ==}
@@ -2002,6 +2008,11 @@ snapshots:
   '@types/oojs-ui@0.46.4':
     dependencies:
       '@types/jquery': 3.5.34
+      '@types/oojs': 7.0.7
+
+  '@types/oojs-ui@0.50.0':
+    dependencies:
+      '@types/jquery': 4.0.0
       '@types/oojs': 7.0.7
 
   '@types/oojs@7.0.7': {}
