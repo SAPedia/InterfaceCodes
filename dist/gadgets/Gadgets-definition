@@ -11,7 +11,6 @@
 * CtrlS[ResourceLoader|default|actions=edit|type=general|rights=edit]|CtrlS.js
 
 == Admin ==
-* CleanDeleteReasons[ResourceLoader|default|actions=delete|type=general|rights=delete]|CleanDeleteReasons.js
 * interfaceVariantConverter[ResourceLoader|actions=view|namespaces=8|contentModels=wikitext|type=general|rights=edit,editinterface|dependencies=mediawiki.api,oojs-ui,ext.gadget.site-lib,ext.gadget.libCachedCode]|interfaceVariantConverter.js
 
 == Site ==

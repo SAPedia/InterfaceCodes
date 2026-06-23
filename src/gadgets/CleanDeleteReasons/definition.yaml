@@ -28,7 +28,7 @@ peers: []
 
 dependencies: []
 
-enable: true
+enable: false
 
 files:
     - Gadget-CleanDeleteReasons.js
