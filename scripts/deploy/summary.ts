@@ -7,6 +7,7 @@ const PLAIN_TEXT_AUTHORS = [
     'github-advanced-security[bot]',
     'Claude Opus 4.7',
     'github-actions[bot]',
+    'Claude Sonnet 4.6',
 ];
 
 /**
