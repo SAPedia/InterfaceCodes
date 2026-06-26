@@ -1,6 +1,12 @@
 {
     "$schema": "./node_modules/oxfmt/configuration_schema.json",
-    "ignorePatterns": ["node_modules/", "dist/", "pnpm-lock.yaml", "tsconfig.json"],
+    "ignorePatterns": [
+        "node_modules/",
+        "dist/",
+        "pnpm-lock.yaml",
+        "tsconfig.json",
+        "scripts/dev/site/.cache"
+    ],
     "printWidth": 100,
     "tabWidth": 4,
     "useTabs": false,
