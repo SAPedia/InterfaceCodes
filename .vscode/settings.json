@@ -3,5 +3,6 @@
         "./.vscode/schemas/gadget-definition.json": "src/gadgets/*/definition.yaml",
         "./.vscode/schemas/gadgets-definition-list.json": "src/gadgets/Gadgets-definition-list.yaml"
     },
-    "editor.defaultFormatter": "oxc.oxc-vscode"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "css.lint.unknownAtRules": "ignore"
 }

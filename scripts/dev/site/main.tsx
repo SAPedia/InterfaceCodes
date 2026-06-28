@@ -1,4 +1,6 @@
+import './tailwind.css';
 import './.cache/styles.css';
+import './main.css';
 import { createRoot } from 'react-dom/client';
 import { Preferences } from './app/preferences';
 import { Router } from './app/router';

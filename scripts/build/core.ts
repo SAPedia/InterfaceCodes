@@ -1,7 +1,7 @@
 import { mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import { join, dirname, basename } from 'node:path';
 import FastGlob from 'fast-glob';
-import { compileJS, compileCSS } from './compile';
+import { compileJS, compileCSS, compileTailwindCSS } from './compile';
 import { generateDefinition } from './definition';
 import { HEADER, FOOTER, toDest, globPath } from './utils';
 
@@ -17,7 +17,18 @@ await Promise.all(
         const dest = join('dist', toDest(entry));
         await mkdir(dirname(dest), { recursive: true });
 
-        const content = entry.endsWith('.scss') ? await compileCSS(entry) : await compileJS(entry);
+        let content;
+        if (entry.endsWith('.scss')) {
+            content = await compileCSS(entry);
+        } else if (entry.endsWith('.css')) {
+            const filename = basename(entry);
+            content =
+                filename === 'Gadget-Tailwind.css'
+                    ? await compileTailwindCSS(entry)
+                    : await compileCSS(entry);
+        } else {
+            content = await compileJS(entry);
+        }
 
         await writeFile(dest, `${HEADER}\n\n${content}\n\n${FOOTER}\n`);
     }),
