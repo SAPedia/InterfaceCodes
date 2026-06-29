@@ -31,5 +31,6 @@ enable: true
 
 files:
     - Gadget-Wikiplus.js
+    - Gadget-Wikiplus.css
 
 description: Wikiplus <small>快速编辑小工具</small>

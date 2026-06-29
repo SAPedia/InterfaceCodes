@@ -31,5 +31,6 @@ enable: true
 
 files:
     - Gadget-InPageEdit-v2.js
+    - Gadget-InPageEdit-v2.css
 
 description: InPageEdit-v2 <small>快速编辑小工具</small>

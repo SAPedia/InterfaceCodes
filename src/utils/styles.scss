@@ -18,7 +18,7 @@
 @mixin portlet-icon($id, $image-url, $extra: ()) {
     ##{$id} a::before {
         content: '';
-        --image: url('#{$image-url}');
+        --image: url("#{$image-url}");
         @each $prop, $val in $extra {
             #{$prop}: #{$val};
         }
