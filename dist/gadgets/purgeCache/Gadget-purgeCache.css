@@ -1,0 +1,12 @@
+/**
+ * -------------------------------------------------------------------------
+ * !!! DON'T MODIFY THIS PAGE MANUALLY, YOUR CHANGES WILL BE OVERWRITTEN !!!
+ * !!!     Repository URL: https://github.com/SAPedia/InterfaceCodes     !!!
+ * -------------------------------------------------------------------------
+ */
+
+/* <nowiki> */
+
+.mw-portlet a:not(:has(.citizen-ui-icon)):before{width:var(--size-icon);min-width:var(--size-icon);height:var(--size-icon);min-height:var(--size-icon);-webkit-mask-position:50%;mask-position:50%;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-image:var(--image);mask-image:var(--image);background-color:currentColor;display:block}#t-purge-cache a:before{content:"";--image:url(/resources/lib/ooui/themes/wikimediaui/images/icons/reload.svg)}
+
+/* </nowiki> */

@@ -1,0 +1,37 @@
+ResourceLoader: true
+
+hidden: false
+
+default: false
+
+supportsUrlLoad: false
+
+skins: []
+
+actions: []
+
+categories: []
+
+namespaces: []
+
+contentModels: []
+
+type: general
+
+package: false
+
+rights: []
+
+peers: []
+
+dependencies:
+    - mediawiki.api
+    - mediawiki.util
+
+enable: true
+
+files:
+    - Gadget-purgeCache.js
+    - Gadget-purgeCache.css
+
+description: 清除缓存 <small>在页面右上角工具栏添加清除页面缓存按钮</small>

@@ -3,6 +3,7 @@
       - MarkRights
       - colorLinks
       - prettyDefinition
+      - purgeCache
 
 - section: Edit
   gadgets:

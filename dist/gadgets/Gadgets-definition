@@ -3,6 +3,7 @@
 == User ==
 * colorLinks[ResourceLoader|type=styles]|colorLinks.css
 * prettyDefinition[ResourceLoader|default|namespaces=8|contentModels=wikitext|type=general|dependencies=mediawiki.util]|prettyDefinition.js|prettyDefinition.css
+* purgeCache[ResourceLoader|type=general|dependencies=mediawiki.api,mediawiki.util]|purgeCache.js|purgeCache.css
 
 == Edit ==
 * InPageEdit-v2[ResourceLoader|type=general|rights=edit]|InPageEdit-v2.js|InPageEdit-v2.css

@@ -1,0 +1,6 @@
+@use 'utils/styles' as *;
+
+@include portlet-icon(
+    $id: 't-purge-cache',
+    $image-url: '/resources/lib/ooui/themes/wikimediaui/images/icons/reload.svg'
+);
