@@ -5,6 +5,7 @@ import { basename, relative, sep } from 'node:path';
  *
  * 映射规则：
  * - `dist/widgets/<name>`             → `Widget:<name>`
+ * - `dist/templates/<name>`             → `Template:<name>`
  * - `dist/global/<name>.js`           → `MediaWiki:<name>.js`
  * - `dist/gadgets/Gadgets-definition` → `MediaWiki:Gadgets-definition`
  * - `dist/gadgets/<gadget>/<file>`   → `MediaWiki:<file>`
@@ -14,6 +15,10 @@ import { basename, relative, sep } from 'node:path';
 const toWikiTitle = (file: string): string => {
     const rel = relative('dist', file).replaceAll(sep, '/');
     const segs = rel.split('/');
+
+    if (rel.startsWith('templates/')) {
+        return `Template:${basename(file)}`;
+    }
 
     if (rel.startsWith('widgets/')) {
         return `Widget:${basename(file)}`;

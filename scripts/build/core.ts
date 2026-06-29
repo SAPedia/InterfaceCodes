@@ -3,7 +3,8 @@ import { join, dirname, basename } from 'node:path';
 import FastGlob from 'fast-glob';
 import { compileJS, compileCSS, compileTailwindCSS } from './compile';
 import { generateDefinition } from './definition';
-import { HEADER, FOOTER, toDest, globPath } from './utils';
+import { buildTemplates } from './templates';
+import { GADGETS_AND_GLOBAL_HEADER, GADGETS_AND_GLOBAL_FOOTER, toDest, globPath } from './utils';
 
 await rm('dist', { recursive: true, force: true });
 
@@ -30,7 +31,10 @@ await Promise.all(
             content = await compileJS(entry);
         }
 
-        await writeFile(dest, `${HEADER}\n\n${content}\n\n${FOOTER}\n`);
+        await writeFile(
+            dest,
+            `${GADGETS_AND_GLOBAL_HEADER}\n\n${content}\n\n${GADGETS_AND_GLOBAL_FOOTER}\n`,
+        );
     }),
 );
 
@@ -72,3 +76,5 @@ await Promise.all(
         await writeFile(dest, parts.join('') + '\n');
     }),
 );
+
+await buildTemplates();

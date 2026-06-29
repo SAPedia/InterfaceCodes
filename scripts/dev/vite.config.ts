@@ -6,6 +6,10 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     root: resolve(import.meta.dirname, './site'),
     plugins: [react(), tailwindcss()],
+    define: {
+        'process.env.CONVERT_TO_HTML': '"true"',
+        'process.env.WIKI_SITE_BASE': '"https://saoaw.com"',
+    },
     resolve: {
         alias: {
             '~': resolve(import.meta.dirname, '../../src'),

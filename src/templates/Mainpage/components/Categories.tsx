@@ -64,6 +64,12 @@ const categoryList: CategoryItem[] = [
     {
         title: '音乐',
     },
+    {
+        title: '衍生作',
+    },
+    {
+        title: '时间线',
+    },
 ];
 
 export const Categories: React.FC = () => (

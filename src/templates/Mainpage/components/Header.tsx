@@ -13,7 +13,7 @@ export const Header = () => (
             <div className="w-full">
                 <div className="group flex w-full cursor-pointer items-center justify-between rounded-xl bg-white/80 px-4 py-3 shadow-sm ring-1 ring-slate-200 backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:ring-blue-400/50 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500/60 sm:px-5 sm:py-3.5 dark:bg-white/6 dark:ring-white/8 dark:backdrop-blur-xl dark:hover:bg-white/10 dark:hover:ring-blue-400/40 dark:focus-within:ring-blue-400/60 dark:focus-within:shadow-blue-900/30">
                     <div className="flex items-center gap-3 text-slate-400 transition-colors group-hover:text-blue-500 dark:text-white/40 dark:group-hover:text-blue-400">
-                        <svg
+                        {/* <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -27,7 +27,7 @@ export const Header = () => (
                                 strokeLinejoin="round"
                                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
                             />
-                        </svg>
+                        </svg> */}
                         <span className="text-xs font-medium sm:text-sm md:text-base dark:text-white/80">
                             点击搜索全站内容
                         </span>
