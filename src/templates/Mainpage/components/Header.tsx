@@ -11,7 +11,7 @@ export const Header = () => (
             </div>
 
             <div className="w-full">
-                <div className="group flex w-full cursor-pointer items-center justify-between rounded-xl bg-white/80 px-4 py-3 shadow-sm ring-1 ring-slate-200 backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:ring-blue-400/50 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500/60 sm:px-5 sm:py-3.5 dark:bg-white/6 dark:ring-white/8 dark:backdrop-blur-xl dark:hover:bg-white/10 dark:hover:ring-blue-400/40 dark:focus-within:ring-blue-400/60 dark:focus-within:shadow-blue-900/30">
+                <div className="citizen-search-trigger group flex w-full cursor-pointer items-center justify-between rounded-xl bg-white/80 px-4 py-3 shadow-sm ring-1 ring-slate-200 backdrop-blur-sm transition-all duration-300 hover:shadow-md hover:ring-blue-400/50 focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500/60 sm:px-5 sm:py-3.5 dark:bg-white/6 dark:ring-white/8 dark:backdrop-blur-xl dark:hover:bg-white/10 dark:hover:ring-blue-400/40 dark:focus-within:ring-blue-400/60 dark:focus-within:shadow-blue-900/30">
                     <div className="flex items-center gap-3 text-slate-400 transition-colors group-hover:text-blue-500 dark:text-white/40 dark:group-hover:text-blue-400">
                         {/* <svg
                             xmlns="http://www.w3.org/2000/svg"
