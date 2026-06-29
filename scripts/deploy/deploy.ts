@@ -1,7 +1,7 @@
 import { Mwn } from 'mwn';
 import 'dotenv/config';
-import { contentHash, needDeploy } from './utils';
 import { formatSummary, getGitInfo } from './summary';
+import { contentHash, needDeploy } from './utils';
 
 const deploy = async () => {
     const newHash = await contentHash();

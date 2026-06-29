@@ -9,7 +9,7 @@ import type {
     GadgetList,
     GadgetSetting,
 } from '@/types/gadgets';
-import { BANNER } from './utils';
+import { GADGETS_DEFINITION_TOP } from './utils';
 
 const getDefinitions = async (): Promise<GadgetSetting[]> => {
     const basePath = resolve('src/gadgets');
@@ -120,7 +120,7 @@ const generateDefinition = async () => {
         await readFile(resolve('src/gadgets/Gadgets-definition-list.yaml'), 'utf8'),
     ) as GadgetList;
 
-    let result = `${BANNER}\n\n`;
+    let result = `${GADGETS_DEFINITION_TOP}\n\n`;
     for (const section of list) {
         result += `== ${section.section} ==\n`;
         for (const name of section.gadgets) {

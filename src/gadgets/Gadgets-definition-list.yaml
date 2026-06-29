@@ -21,6 +21,7 @@
   gadgets:
       - SiteTemplate
       - site-lib
+      - Tailwind
       - libLocalObjectStorage
       - libCachedCode
       - libOOUIDialog

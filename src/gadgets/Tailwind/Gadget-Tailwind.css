@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@source '../../templates';
+
+@custom-variant dark {
+    &:where(.skin-theme-clientpref-night, .skin-theme-clientpref-night *) {
+        @slot;
+    }
+    @media (prefers-color-scheme: dark) {
+        &:where(.skin-theme-clientpref-os, .skin-theme-clientpref-os *) {
+            @slot;
+        }
+    }
+}
+
+@custom-variant light {
+    &:where(.skin-theme-clientpref-day, .skin-theme-clientpref-day *) {
+        @slot;
+    }
+    @media (prefers-color-scheme: light) {
+        &:where(.skin-theme-clientpref-os, .skin-theme-clientpref-os *) {
+            @slot;
+        }
+    }
+}
