@@ -8,6 +8,7 @@ on:
             - 'src/gadgets/**'
             - 'src/global/**'
             - 'src/widgets/**'
+            - 'src/templates/**'
     workflow_dispatch:
 
 permissions:
