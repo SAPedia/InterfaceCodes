@@ -15,4 +15,11 @@ export default defineConfig({
             '~': resolve(import.meta.dirname, '../../src'),
         },
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                loadPaths: [resolve(import.meta.dirname, '../../src')],
+            },
+        },
+    },
 });

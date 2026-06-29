@@ -1,0 +1,9 @@
+@use 'utils/styles' as *;
+
+@include portlet-icon(
+    $id: 'Wikiplus-Edit-TopBtn',
+    $image-url: '/images/b/bf/Wikiplus_icon.svg',
+    $extra: (
+        'transform': 'scale(1.1)',
+    )
+);

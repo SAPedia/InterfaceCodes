@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import { extname } from 'node:path';
+import { extname, resolve } from 'node:path';
 import tailwindcss from '@tailwindcss/postcss';
 import browserslist from 'browserslist';
 import { build } from 'esbuild';
@@ -44,7 +44,10 @@ const compileCSS = async (file: string) => {
             .trim();
 
     if (extname(file) === '.scss') {
-        return minifyCSS(compile(file, { style: 'expanded' }).css, file);
+        return minifyCSS(
+            compile(file, { style: 'expanded', loadPaths: [resolve('src')] }).css,
+            file,
+        );
     }
 
     const bundled = await build({
