@@ -1,0 +1,10 @@
+// 侧边栏按钮图标
+@mixin portlet-icon($id, $image-url, $extra: ()) {
+    ##{$id} a::before {
+        content: '';
+        --image: url('#{$image-url}');
+        @each $prop, $val in $extra {
+            #{$prop}: #{$val};
+        }
+    }
+}

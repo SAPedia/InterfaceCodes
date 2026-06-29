@@ -1,0 +1,15 @@
+// 深色模式
+@mixin dark {
+    @at-root {
+        :root.skin-theme-clientpref-night {
+            @content;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        @at-root {
+            :root.skin-theme-clientpref-os {
+                @content;
+            }
+        }
+    }
+}

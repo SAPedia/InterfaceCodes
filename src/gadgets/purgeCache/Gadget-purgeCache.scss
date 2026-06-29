@@ -1,4 +1,4 @@
-@use 'utils/styles' as *;
+@use 'styles/portlet-icon' as *;
 
 @include portlet-icon(
     $id: 't-purge-cache',

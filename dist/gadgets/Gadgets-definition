@@ -15,6 +15,7 @@
 * interfaceVariantConverter[ResourceLoader|actions=view|namespaces=8|contentModels=wikitext|type=general|rights=edit,editinterface|dependencies=mediawiki.api,oojs-ui,ext.gadget.site-lib,ext.gadget.libCachedCode]|interfaceVariantConverter.js
 
 == Site ==
+* SiteStyles[ResourceLoader|hidden|default|type=styles]|SiteStyles.css
 * SiteTemplate[ResourceLoader|hidden|default|type=styles]|SiteTemplate.css
 * site-lib[ResourceLoader|hidden|type=general|dependencies=mediawiki.util,ext.gadget.libCachedCode]|site-lib.js
 * Tailwind[ResourceLoader|hidden|default|type=styles]|Tailwind.css

@@ -1,0 +1,30 @@
+@use 'styles/dark' as *;
+
+:root {
+    --color-progressive-oklch__h: 235;
+    --color-progressive-oklch__c: 0.18;
+    --color-surface-0-alpha: oklch(from var(--color-surface-0) l c h / 0.92);
+}
+
+body {
+    background-image:
+        linear-gradient(var(--color-surface-0-alpha), var(--color-surface-0-alpha)),
+        url('https://saoaw.com/images/1/1c/SAO_10th_Anniversary.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.mw-portlet a:not(:has(.citizen-ui-icon))::before {
+    display: block;
+    width: var(--size-icon);
+    min-width: var(--size-icon);
+    height: var(--size-icon);
+    min-height: var(--size-icon);
+    background-color: currentcolor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: var(--image);
+}

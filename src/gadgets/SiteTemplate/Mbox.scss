@@ -1,3 +1,5 @@
+@use 'styles/dark' as *;
+
 /* Template:Mbox  */
 
 .mbox {
@@ -30,6 +32,10 @@
 
 .mbox-title {
     font-weight: bold;
+}
+
+.mw-heading.mw-heading2 + div.mbox {
+    margin-top: 2em;
 }
 
 .mbox-info {
@@ -80,4 +86,56 @@
 .mbox-copyright {
     border-color: #795548;
     background: #f5ede6;
+}
+
+@include dark {
+    .mbox-info {
+        border-color: #4da6ff;
+        background: #0a1a2e;
+    }
+
+    .mbox-caution {
+        border-color: #ffa726;
+        background: #1a1400;
+    }
+
+    .mbox-warn {
+        border-color: #ef5350;
+        background: #2a0a0a;
+    }
+
+    .mbox-delete {
+        border-color: #e53935;
+        background: #1f0808;
+    }
+
+    .mbox-policy {
+        border-color: #4caf50;
+        background: #0a1f0a;
+    }
+
+    .mbox-essay {
+        border-color: #9c6ade;
+        background: #140a1f;
+    }
+
+    .mbox-help {
+        border-color: #4dd0e1;
+        background: #0a1a1f;
+    }
+
+    .mbox-draft {
+        border-color: #d4a800;
+        background: #1a1400;
+    }
+
+    .mbox-license {
+        border-color: #a1887f;
+        background: #140d0a;
+    }
+
+    .mbox-copyright {
+        border-color: #a1887f;
+        background: #140d0a;
+    }
 }
