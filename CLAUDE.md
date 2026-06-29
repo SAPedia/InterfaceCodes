@@ -7,8 +7,7 @@ Interface code repository for [SAPedia](https://saoaw.com). Source in `src/` is 
 ```bash
 pnpm run build                # Compile all sources to dist/
 pnpm run dev                  # Start Vite dev server for template preview
-pnpm run deploy               # Deploy to wiki (requires .env with PASSWORD + USERAGENT)
-pnpm run deploy -- --dry-run  # Preview deployment without pushing
+pnpm run deploy --dry-run  # Preview deployment without pushing
 pnpm run lint                 # oxlint + TypeScript type checking
 pnpm run fmt                  # oxfmt formatting
 ```
@@ -18,10 +17,8 @@ pnpm run fmt                  # oxfmt formatting
 ```
 src/
   gadgets/              # MediaWiki gadgets — one subdirectory per gadget
-    Gadget-<Name>.ts    # JS/TS source (compiled to IIFE + minified by esbuild)
-    Gadget-<Name>.css   # Styles-only gadgets output directly
-    Gadget-<Name>.scss  # SCSS compiled via sass-embedded → lightningcss
-    definition.yaml     # ResourceLoader config
+    Gadget-<Name>.{ts,js,css,scss}  # Script entry point (compiled by esbuild/sass-embedded)
+    definition.yaml                 # ResourceLoader config
   global/               # Global skin overrides (e.g. Citizen.css)
   templates/            # React SSR templates → wikitext output
     <Name>/index.tsx    # Template entry (React component, SSR via react-dom/server)
@@ -83,10 +80,6 @@ Templates in `src/templates/<Name>/index.tsx` export a default function returnin
 - `~/*` → `src/*` (gadget source components/lib)
 
 The tsconfig enables strict checks including `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noUnusedLocals/Parameters`, `noImplicitReturns`, and `noPropertyAccessFromIndexSignature`.
-
-## Chinese Language Variants
-
-Handle via `wgULS(hans, hant, cn, tw, hk, sg, zh, mo, my)` and `wgUVS(...)`, defined in `site-lib`. The build script auto-generates variant descriptions for each gadget using opencc-js.
 
 ## Deployment
 
