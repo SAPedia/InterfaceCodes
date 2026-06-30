@@ -12,7 +12,7 @@
 * CtrlS[ResourceLoader|default|actions=edit|type=general|rights=edit]|CtrlS.js
 
 == Admin ==
-* interfaceVariantConverter[ResourceLoader|actions=view|namespaces=8|contentModels=wikitext|type=general|rights=edit,editinterface|dependencies=mediawiki.api,oojs-ui,ext.gadget.site-lib,ext.gadget.libCachedCode]|interfaceVariantConverter.js
+* interfaceVariantConverter[ResourceLoader|actions=view|namespaces=8|contentModels=wikitext|type=general|rights=edit,editinterface|dependencies=mediawiki.api,oojs-ui,ext.gadget.site-lib,ext.gadget.libCachedCode]|interfaceVariantConverter.js|interfaceVariantConverter.css
 
 == Site ==
 * SiteStyles[ResourceLoader|hidden|default|type=styles]|SiteStyles.css
