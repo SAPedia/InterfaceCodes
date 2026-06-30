@@ -7,6 +7,6 @@
 
 /* <nowiki> */
 
-#t-purge-cache a:before{content:"";--image:url(/resources/lib/ooui/themes/wikimediaui/images/icons/reload.svg)}
+#ca-purge-cache a:before{content:"";--image:url(/resources/lib/ooui/themes/wikimediaui/images/icons/reload.svg)}
 
 /* </nowiki> */

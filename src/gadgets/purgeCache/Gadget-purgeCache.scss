@@ -1,6 +1,6 @@
 @use 'styles/portlet-icon' as *;
 
 @include portlet-icon(
-    $id: 't-purge-cache',
+    $id: 'ca-purge-cache',
     $image-url: '/resources/lib/ooui/themes/wikimediaui/images/icons/reload.svg'
 );

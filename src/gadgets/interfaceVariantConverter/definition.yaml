@@ -39,5 +39,6 @@ enable: true
 
 files:
     - Gadget-interfaceVariantConverter.js
+    - Gadget-interfaceVariantConverter.css
 
 description: 自动繁简转换 <small>自动同步界面消息的繁简转换。</small>

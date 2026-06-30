@@ -5,8 +5,8 @@ $(() => {
         return;
     }
 
-    mw.util.addPortletLink('p-cactions', '#', '清除缓存', 't-purge-cache', '点击清除当前页面缓存');
-    $('#t-purge-cache').on('click', async e => {
+    mw.util.addPortletLink('p-cactions', '#', '清除缓存', 'ca-purge-cache', '点击清除当前页面缓存');
+    $('#ca-purge-cache').on('click', async e => {
         e.preventDefault();
         try {
             await new mw.Api().post({
