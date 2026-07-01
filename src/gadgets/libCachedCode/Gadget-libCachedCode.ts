@@ -1,9 +1,9 @@
 (() => {
-    const localObjectStorage = new LocalObjectStorage('AnnTools-libCachedCode', {
+    const localObjectStorage = new LocalObjectStorage('libCachedCode', {
         expires: [30, 'days'],
     });
     for (const i of Object.keys(localStorage)) {
-        if (i.startsWith('AnnTools-libCachedCode')) {
+        if (i.startsWith('libCachedCode')) {
             localStorage.removeItem(i);
         }
     }
@@ -16,7 +16,7 @@
         if (typeof code !== 'string') {
             code = await (await fetch(url)).text();
         }
-        localObjectStorage.setItem(`AnnTools-libCachedCode:${url}`, { code });
+        localObjectStorage.setItem(`libCachedCode:${url}`, { code });
         return code;
     };
     const getCachedCodeUrl = async (url: string): Promise<string> =>
