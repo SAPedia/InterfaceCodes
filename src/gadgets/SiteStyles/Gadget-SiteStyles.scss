@@ -1,4 +1,4 @@
-@use 'styles/dark' as *;
+@use 'styles/portlet-icon' as *;
 
 :root {
     --color-progressive-oklch__h: 235;
@@ -28,3 +28,9 @@ body {
     mask-size: contain;
     mask-image: var(--image);
 }
+
+// IPE或W+会引入，放进全站样式避免重复
+@include portlet-icon(
+    $id: 'cm-settings',
+    $image-url: '/resources/lib/ooui/themes/wikimediaui/images/icons/code.svg'
+);
