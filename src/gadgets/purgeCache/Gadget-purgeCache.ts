@@ -22,6 +22,7 @@ $(() => {
                 title: wgPageName,
                 appendtext: '',
                 nocreate: true,
+                watchlist: 'nochange',
             });
             mw.notify('清除成功，即将刷新……', { type: 'success' });
             setTimeout(() => {
