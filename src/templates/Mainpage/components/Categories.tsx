@@ -1,16 +1,20 @@
+import { WikitextLink } from '~/components';
+
 interface CategoryBaseProps {
     title: string;
     imageUrl?: string;
     bgColor?: string;
+    link?: string;
 }
 
 const CategoryBase: React.FC<CategoryBaseProps> = ({
     title,
+    link,
     imageUrl,
     bgColor = 'bg-neutral-800',
 }) => (
     <div
-        className={`group relative flex min-h-12 w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:ring-1 hover:ring-white/15 ${bgColor}`}
+        className={`group relative flex min-h-12 w-full items-center justify-center overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:ring-1 hover:ring-white/15 [&_a]:absolute [&_a]:inset-0 [&_a]:z-10 [&_a]:flex [&_a]:items-center [&_a]:justify-center [&_a]:text-center [&_a]:text-[14px] [&_a]:font-semibold [&_a]:text-white [&_a]:drop-shadow-md ${bgColor}`}
     >
         {imageUrl && (
             <>
@@ -21,14 +25,13 @@ const CategoryBase: React.FC<CategoryBaseProps> = ({
                 <div className="absolute inset-0 bg-black/50 transition-opacity group-hover:bg-black/60" />
             </>
         )}
-        <span className="relative z-10 text-center text-[14px] font-semibold text-white drop-shadow-md">
-            {title}
-        </span>
+        <WikitextLink page={link}>{title}</WikitextLink>
     </div>
 );
 
 interface CategoryItem {
     title: string;
+    link: string;
     image?: string;
     bgColor?: string;
 }
@@ -36,39 +39,51 @@ interface CategoryItem {
 const categoryList: CategoryItem[] = [
     {
         title: '角色',
+        link: 'Portal:角色',
     },
     {
         title: '物品',
+        link: 'Portal:物品',
     },
     {
         title: '事件',
+        link: 'Portal:事件',
     },
     {
         title: '地点',
+        link: 'Portal:地点',
     },
     {
         title: '组织',
+        link: 'Portal:组织',
     },
     {
         title: '动画',
+        link: 'Portal:动画',
     },
     {
         title: '漫画',
+        link: 'Portal:漫画',
     },
     {
         title: '小说',
+        link: 'Portal:小说',
     },
     {
         title: '游戏',
+        link: 'Portal:游戏',
     },
     {
         title: '音乐',
+        link: 'Portal:音乐',
     },
     {
         title: '衍生作',
+        link: 'Portal:衍生作',
     },
     {
         title: '时间线',
+        link: 'Portal:时间线',
     },
 ];
 
@@ -78,6 +93,7 @@ export const Categories: React.FC = () => (
             <CategoryBase
                 key={item.title}
                 title={item.title}
+                link={item.link}
                 {...(item.image ? { imageUrl: item.image } : {})}
                 {...(item.bgColor ? { bgColor: item.bgColor } : {})}
             />
