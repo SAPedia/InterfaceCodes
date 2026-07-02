@@ -5,15 +5,23 @@ $(() => {
         return;
     }
 
+    const api = new mw.Api();
+
     mw.util.addPortletLink('p-cactions', '#', '清除缓存', 'ca-purge-cache', '点击清除当前页面缓存');
     $('#ca-purge-cache').on('click', async e => {
         e.preventDefault();
         try {
-            await new mw.Api().post({
+            await api.post({
                 action: 'purge',
                 title: wgPageName,
                 forcelinkupdate: true,
                 forcerecursivelinkupdate: true,
+            });
+            await api.postWithToken('csrf', {
+                action: 'edit',
+                title: wgPageName,
+                appendtext: '',
+                nocreate: true,
             });
             mw.notify('清除成功，即将刷新……', { type: 'success' });
             setTimeout(() => {
