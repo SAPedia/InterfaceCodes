@@ -14,7 +14,7 @@ const CategoryBase: React.FC<CategoryBaseProps> = ({
     bgColor = 'bg-neutral-800',
 }) => (
     <div
-        className={`group relative flex min-h-12 w-full items-center justify-center overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:ring-1 hover:ring-white/15 [&_a]:absolute [&_a]:inset-0 [&_a]:z-10 [&_a]:flex [&_a]:items-center [&_a]:justify-center [&_a]:text-center [&_a]:text-[14px] [&_a]:font-semibold [&_a]:text-white [&_a]:drop-shadow-md ${bgColor}`}
+        className={`group relative flex min-h-12 w-full items-center justify-center overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:ring-1 hover:ring-white/15 [&_a]:absolute [&_a]:inset-0 [&_a]:z-10 [&_a]:flex [&_a]:items-center [&_a]:justify-center [&_a]:text-center [&_a]:text-[14px] [&_a]:font-semibold [&_a:link]:text-white [&_a:visited]:text-white [&_a.new]:text-white [&_a:hover]:text-white [&_a:active]:text-white [&_a]:drop-shadow-md ${bgColor}`}
     >
         {imageUrl && (
             <>
