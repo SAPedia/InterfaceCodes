@@ -64,10 +64,10 @@ await Promise.all(
         ];
 
         if (css) {
-            parts.push(`<styles>\n${css}\n</styles>`);
+            parts.push(`<style>\n${css}\n</style>`);
         }
         if (js) {
-            parts.push(`<scripts>\n${js}\n</scripts>`);
+            parts.push(`<script>\n${js}\n</script>`);
         }
         parts.push('<!--{/if}-->', '</includeonly>');
 
