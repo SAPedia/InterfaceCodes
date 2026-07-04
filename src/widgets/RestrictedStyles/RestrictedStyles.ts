@@ -1,4 +1,6 @@
-(() => {
+import { depend } from '~/lib/rlq';
+
+depend('mediawiki.base', () => {
     const { wgCanonicalSpecialPageName } = mw.config.get();
     const allowList = [
         'Preferences',
@@ -19,4 +21,4 @@
             'https://saoaw.com/load.php?lang=zh&modules=ext.gadget.SiteStyles&only=styles&skin=citizen';
         document.head.append(link);
     }
-})();
+});
