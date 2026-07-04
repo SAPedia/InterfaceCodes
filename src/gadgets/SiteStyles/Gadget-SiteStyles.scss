@@ -34,3 +34,33 @@ body {
     $id: 'cm-settings',
     $image-url: '/resources/lib/ooui/themes/wikimediaui/images/icons/code.svg'
 );
+
+// 公告栏
+#siteNotice .scrollDiv {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0 !important;
+    height: 1.28rem;
+}
+
+#siteNotice .scrollDiv:empty {
+    display: none;
+}
+
+#siteNotice .scrollDiv > * {
+    list-style: none;
+    padding-left: 0;
+    position: absolute;
+    width: 100%;
+    top: 1.28rem;
+}
+
+#siteNotice .scrollDiv > *:first-child {
+    top: 0;
+}
+
+#siteNotice .scrollDiv.scrolling.animation,
+#siteNotice .scrollDiv.scrolling.animation > * {
+    transition: all 0.37s ease-in-out;
+}
