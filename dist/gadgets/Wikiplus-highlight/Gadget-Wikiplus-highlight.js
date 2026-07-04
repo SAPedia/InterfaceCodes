@@ -7,6 +7,6 @@
 
 /* <nowiki> */
 
-"use strict";(()=>{(()=>{const{wgIsArticle:i,wgAction:t}=mw.config.get(["wgIsArticle","wgAction"]);i&&t==="view"&&mw.loader.load("//fastly.jsdelivr.net/npm/wikiplus-highlight@latest")})();})();
+"use strict";(()=>{(()=>{let{wgIsArticle:i,wgAction:t}=mw.config.get(["wgIsArticle","wgAction"]);i&&t==="view"&&mw.loader.load("//fastly.jsdelivr.net/npm/wikiplus-highlight@latest")})();})();
 
 /* </nowiki> */

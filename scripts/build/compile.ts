@@ -17,6 +17,8 @@ const compileJS = async (file: string) => {
     const result = await build({
         entryPoints: [file],
         format: 'iife',
+        bundle: true,
+        alias: { '~': resolve('src') },
         minify: true,
         sourcemap: false,
         target: 'es2017',
