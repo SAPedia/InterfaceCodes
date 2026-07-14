@@ -1,6 +1,5 @@
 - section: User
   gadgets:
-      - MarkRights
       - colorLinks
       - prettyDefinition
       - purgeCache
@@ -14,7 +13,6 @@
 
 - section: Admin
   gadgets:
-      - rollback-summary
       - CleanDeleteReasons
       - interfaceVariantConverter
 
