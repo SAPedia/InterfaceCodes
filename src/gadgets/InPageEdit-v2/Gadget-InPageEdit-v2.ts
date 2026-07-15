@@ -12,9 +12,11 @@
                 class: 'vector-tab-noicon mw-list-item',
             }).append(
                 $('<a>', {
-                    href: 'javascript:void(0)',
+                    href: '#',
                     text: ctx._msg('quick-edit'),
-                }).on('click', () => {
+                    role: 'button',
+                }).on('click', e => {
+                    e.preventDefault();
                     InPageEdit.quickEdit({
                         page: wgRelevantPageName,
                         revision: wgRevisionId || undefined,
