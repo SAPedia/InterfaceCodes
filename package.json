@@ -2,7 +2,6 @@
     "name": "interface-codes",
     "description": "Interface codes for SAPedia",
     "license": "MIT",
-    "packageManager": "pnpm@11.7.0",
     "type": "module",
     "scripts": {
         "build": "tsx scripts/build/core.ts",
@@ -54,5 +53,6 @@
             "version": "11.7.0",
             "onFail": "download"
         }
-    }
+    },
+    "packageManager": "pnpm@11.7.0"
 }
