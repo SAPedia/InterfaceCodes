@@ -11,8 +11,8 @@
         "lint": "pnpm tsc --noEmit & oxlint"
     },
     "dependencies": {
-        "@tailwindcss/postcss": "^4.3.1",
-        "@tailwindcss/vite": "^4.3.1",
+        "@tailwindcss/postcss": "^4.3.3",
+        "@tailwindcss/vite": "^4.3.3",
         "@vitejs/plugin-react": "^6.0.3",
         "browserslist": "^4.28.4",
         "crypto-js": "^4.2.0",
@@ -27,7 +27,7 @@
         "react": "^19.2.7",
         "react-dom": "^19.2.7",
         "sass-embedded": "^1.100.0",
-        "tailwindcss": "^4.3.1",
+        "tailwindcss": "^4.3.3",
         "tsx": "^4.22.4",
         "typescript": "^6.0.3",
         "vite": "^8.1.0",
