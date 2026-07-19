@@ -305,7 +305,7 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       types-mediawiki:
-        specifier: ^2.0.0
+        specifier: ^2.1.0
         version: 2.1.0
 
 packages:
