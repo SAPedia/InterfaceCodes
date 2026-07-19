@@ -9,6 +9,8 @@ on:
             - 'src/global/**'
             - 'src/widgets/**'
             - 'src/templates/**'
+    schedule:
+        - cron: '17 16 * * *' # Daily 00:17 CST
     workflow_dispatch:
 
 permissions:
@@ -36,7 +38,5 @@ jobs:
                   cache: pnpm
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
-            - name: Build
-              run: pnpm run build
             - name: Deploy
               run: pnpm run deploy
