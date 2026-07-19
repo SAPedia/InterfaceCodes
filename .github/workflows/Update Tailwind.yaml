@@ -27,6 +27,6 @@ jobs:
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
             - name: Update TailwindCSS
-              run: tsx scripts/auto/updateTailwind.ts
+              run: pnpm tsx scripts/auto/updateTailwind.ts
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
