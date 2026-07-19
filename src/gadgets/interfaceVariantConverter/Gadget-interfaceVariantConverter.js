@@ -402,7 +402,7 @@ $(() =>
 
                 if (this.config.useOpenCC && !window.OpenCC) {
                     await libCachedCode.injectCachedCode(
-                        'https://fastly.jsdelivr.net/npm/opencc-js@latest',
+                        'https://fastly.jsdelivr.net/npm/opencc-js@1.4.1',
                         'script',
                     );
                 }
