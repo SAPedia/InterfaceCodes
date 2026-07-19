@@ -8,6 +8,7 @@ const PLAIN_TEXT_AUTHORS = [
     'Claude Opus 4.7',
     'github-actions[bot]',
     'Claude Sonnet 4.6',
+    'Claude Opus 4.8 (1M context)',
 ];
 
 /**
