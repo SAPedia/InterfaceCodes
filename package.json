@@ -24,7 +24,7 @@
         "mwn": "^3.0.3",
         "octokit": "^5.0.5",
         "opencc-js": "^1.4.1",
-        "postcss": "^8.5.15",
+        "postcss": "^8.5.20",
         "react": "^19.2.7",
         "react-dom": "^19.2.7",
         "sass-embedded": "^1.100.0",
