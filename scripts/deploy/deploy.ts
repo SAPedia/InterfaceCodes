@@ -46,6 +46,11 @@ const deploy = async () => {
     const oldHash = await readDeploymentJson();
     const deployment = needDeploy(oldHash, newHash);
 
+    if (Object.keys(deployment).length === 0) {
+        console.log('No changes detected, skipping deploy.');
+        return;
+    }
+
     await bot.batchOperation(Object.entries(deployment), async ([title, { content, distPath }]) => {
         const [message, id, author, coAuthors] = getGitInfo(distPath);
 
