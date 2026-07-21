@@ -20,7 +20,7 @@
         "esbuild": "^0.28.1",
         "fast-glob": "^3.3.3",
         "js-yaml": "^5.2.1",
-        "lightningcss": "^1.32.0",
+        "lightningcss": "^1.33.0",
         "mwn": "^3.0.3",
         "octokit": "^5.0.5",
         "opencc-js": "^1.4.1",
