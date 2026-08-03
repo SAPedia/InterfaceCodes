@@ -3,3 +3,4 @@ allowBuilds:
   '@parcel/watcher': true
 minimumReleaseAgeExclude:
   - wikiparser-node@1.46.2
+  - tsx@4.23.5
