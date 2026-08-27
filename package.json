@@ -17,7 +17,7 @@
         "browserslist": "^4.28.8",
         "crypto-js": "^4.2.0",
         "dotenv": "^17.4.2",
-        "esbuild": "^0.28.1",
+        "esbuild": "^0.28.2",
         "fast-glob": "^3.3.3",
         "js-yaml": "^5.2.3",
         "lightningcss": "^1.33.0",
