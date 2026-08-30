@@ -1,5 +1,5 @@
+import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
-import sha256 from 'crypto-js/sha256';
 import FastGlob from 'fast-glob';
 import type { DeployFileEntry, DeployFileMap } from '@/types/deploy';
 import { toWikiTitle } from './mapping';
@@ -15,7 +15,7 @@ const contentHash = async (): Promise<DeployFileMap> => {
     const entries = await Promise.all(
         paths.map(async file => {
             const content = (await readFile(file, 'utf-8')).trim();
-            const hash = sha256(content).toString();
+            const hash = createHash('sha256').update(content, 'utf8').digest('hex');
             const title = toWikiTitle(file);
 
             return {

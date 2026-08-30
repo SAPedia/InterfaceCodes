@@ -15,7 +15,6 @@
         "@tailwindcss/vite": "^4.3.3",
         "@vitejs/plugin-react": "^6.0.5",
         "browserslist": "^4.28.8",
-        "crypto-js": "^4.2.0",
         "dotenv": "^17.4.2",
         "esbuild": "^0.28.2",
         "fast-glob": "^3.3.3",
@@ -35,7 +34,6 @@
         "wikiparser-node": "^1.46.2"
     },
     "devDependencies": {
-        "@types/crypto-js": "^4.2.2",
         "@types/jquery": "^4.0.1",
         "@types/js-yaml": "^4.0.9",
         "@types/node": "^25.9.5",

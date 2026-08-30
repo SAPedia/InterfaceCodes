@@ -10,6 +10,7 @@ const PLAIN_TEXT_AUTHORS = [
     'Claude Sonnet 4.6',
     'Claude Opus 4.8 (1M context)',
     'renovate[bot]',
+    'Claude',
 ];
 
 /**

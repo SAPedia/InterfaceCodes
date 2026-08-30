@@ -1,4 +1,4 @@
-import md5 from 'crypto-js/md5';
+import { createHash } from 'node:crypto';
 
 const WIKI_SITE_BASE = process.env['WIKI_SITE_BASE'] || 'https://saoaw.com';
 
@@ -33,7 +33,7 @@ const normalizeWikiTitle = (title: string): string => {
  */
 const getWikiImagePath = (fileName: string): string => {
     const normalizedName = normalizeWikiTitle(fileName);
-    const hash = md5(normalizedName).toString();
+    const hash = createHash('md5').update(normalizedName, 'utf8').digest('hex');
     const first = hash[0]!;
     const prefix = hash.slice(0, 2);
     const encoded = normalizedName.replace(/%/g, '%25');

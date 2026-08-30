@@ -219,9 +219,6 @@ importers:
       browserslist:
         specifier: ^4.28.8
         version: 4.28.8
-      crypto-js:
-        specifier: ^4.2.0
-        version: 4.2.0
       dotenv:
         specifier: ^17.4.2
         version: 17.4.2
@@ -274,9 +271,6 @@ importers:
         specifier: ^1.46.2
         version: 1.46.3(ajv@8.20.0)(stylelint-config-recommended@18.0.0(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2)))(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2))
     devDependencies:
-      '@types/crypto-js':
-        specifier: ^4.2.2
-        version: 4.2.2
       '@types/jquery':
         specifier: ^4.0.1
         version: 4.0.1
@@ -1286,9 +1280,6 @@ packages:
   '@types/aws-lambda@8.10.162':
     resolution: {integrity: sha512-Fn658grtLOci1oxi1391vvDWJRKNGWRSqfxRkmN/Iy3c0tQH1USMKEXcPYHLvope+ZgTFocx9FRQJx1muBL6qw==}
 
-  '@types/crypto-js@4.2.2':
-    resolution: {integrity: sha512-sDOLlVbHhXpAUAL0YHDUUwDZf3iN4Bwi4W6a0W0b+QcAezUbRtH4FVb+9J4h+XFPW7l/gQ9F8qC7P+Ec4k8QVQ==}
-
   '@types/jquery@3.5.34':
     resolution: {integrity: sha512-3m3939S3erqmTLJANS/uy0B6V7BorKx7RorcGZVjZ62dF5PAGbKEDZK1CuLtKombJkFA2T1jl8LAIIs7IV6gBQ==}
 
@@ -1566,10 +1557,6 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
-
-  crypto-js@4.2.0:
-    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
-    deprecated: Active development of CryptoJS has been discontinued. This library is no longer maintained.
 
   css-functions-list@3.3.3:
     resolution: {integrity: sha512-8HFEBPKhOpJPEPu70wJJetjKta86Gw9+CCyCnB3sui2qQfOvRyqBy4IKLKKAwdMpWb2lHXWk9Wb4Z6AmaUT1Pg==}
@@ -3254,8 +3241,6 @@ snapshots:
 
   '@types/aws-lambda@8.10.162': {}
 
-  '@types/crypto-js@4.2.2': {}
-
   '@types/jquery@3.5.34':
     dependencies:
       '@types/sizzle': 2.3.10
@@ -3465,8 +3450,6 @@ snapshots:
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 7.0.2
-
-  crypto-js@4.2.0: {}
 
   css-functions-list@3.3.3: {}
 
