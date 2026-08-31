@@ -268,8 +268,8 @@ importers:
         specifier: ^8.2.1
         version: 8.2.2(@types/node@25.9.5)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.103.1)(sass@1.103.1)(tsx@4.23.12)
       wikiparser-node:
-        specifier: ^1.46.2
-        version: 1.46.3(ajv@8.20.0)(stylelint-config-recommended@18.0.0(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2)))(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2))
+        specifier: ^1.46.4
+        version: 1.46.4(ajv@8.20.0)(stylelint-config-recommended@18.0.0(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2)))(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2))
     devDependencies:
       '@types/jquery':
         specifier: ^4.0.1
@@ -2540,8 +2540,8 @@ packages:
     resolution: {integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==}
     hasBin: true
 
-  wikiparser-node@1.46.3:
-    resolution: {integrity: sha512-T9qHjUGc4gpb7aNwddt/PWSF8/zqczLn/kXf+TROVF41RZQtBVQXYZK1bmgCKMk+8U1lvGiz/ENLMCFH3CooDQ==}
+  wikiparser-node@1.46.4:
+    resolution: {integrity: sha512-lrjKRA8wFrscrhCfTD1ezwDWf27V7CEElPiZhPvDY4XQSVTXxhk3T7IBTUbaovQnvvobSzsfu33BUXi3c0Dc2w==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24.11.0}
     hasBin: true
     peerDependencies:
@@ -4374,7 +4374,7 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  wikiparser-node@1.46.3(ajv@8.20.0)(stylelint-config-recommended@18.0.0(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2)))(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2)):
+  wikiparser-node@1.46.4(ajv@8.20.0)(stylelint-config-recommended@18.0.0(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2)))(stylelint@17.14.1(supports-color@10.2.2)(typescript@7.0.2)):
     dependencies:
       '@bhsd/cm-util': 2.4.1
       '@bhsd/common': 4.1.0(culori@4.0.2)
