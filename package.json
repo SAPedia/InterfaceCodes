@@ -36,7 +36,7 @@
     "devDependencies": {
         "@types/jquery": "^4.0.1",
         "@types/js-yaml": "^4.0.9",
-        "@types/node": "^25.9.6",
+        "@types/node": "^25.9.8",
         "@types/oojs-ui": "^0.50.0",
         "@types/react": "^19.3.0",
         "@types/react-dom": "^19.3.0",
